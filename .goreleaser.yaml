@@ -1,0 +1,11 @@
+version: 2
+builds:
+  # You can have multiple builds defined as a yaml list
+  - #
+    # ID of the build.
+    #
+    # Default: Project directory name.
+    id: "my-build"
+
+    # Use rust.
+    builder: rust

@@ -2,6 +2,22 @@
 name = "affine-break"
 version = "0.1.0"
 edition = "2021"
+authors = ["DawnMagnet"]
+description = "a tools break affine cipher"
+license = "MIT"
 
 [dependencies]
 clap = { version = "4.5.34", features = ["derive"] }
+
+[package.metadata.generate-rpm]
+version = "0.1.0"
+license = "MIT"
+
+
+[[package.metadata.generate-rpm.assets]]
+source = "target/x86_64-unknown-linux-musl/release/affine-break"
+dest = "/usr/bin/affine-break"
+mode = "755"
+
+[package.metadata.deb]
+maintainer = "axccjqh@qq.com"
