@@ -15,7 +15,7 @@ builds:
       - "aarch64-unknown-linux-musl"
 
 nfpms:
-  - builds:
+  - ids:
       - "affine-build"
     vendor: dawnmagnet
     homepage: "https://github.com/DawnMagnet/affine-break.git"
