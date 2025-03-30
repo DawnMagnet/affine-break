@@ -1,4 +1,9 @@
 version: 2
+
+before:
+  hooks:
+    - rustup default stable
+    - cargo install --locked cargo-zigbuild
 builds:
   - id: "affine-build"
     builder: rust
@@ -14,8 +19,8 @@ nfpms:
       - "affine-build"
     vendor: dawnmagnet
     homepage: "https://github.com/DawnMagnet/affine-break.git"
-    maintainer: "Dawn Magnet <axccjqh@qq.comm>"
-    description: "Cipher/decrypt files with affine cipher"
+    maintainer: "Dawn Magnet <axccjqh@qq.com>"
+    description: "Decrypt a ciphertext using the affine cipher, you should provide two pairs of ciphertext and plaintext characters"
     license: MIT
     formats:
       - apk
