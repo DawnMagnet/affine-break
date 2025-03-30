@@ -3,19 +3,19 @@ builds:
   - id: "affine-build"
     builder: rust
     targets:
-      - "x86_64-unknown-linux-gnu"
       - "x86_64-apple-darwin"
       - "x86_64-pc-windows-gnu"
-      - "aarch64-unknown-linux-gnu"
       - "aarch64-apple-darwin"
       - "x86_64-unknown-linux-musl"
+      - "aarch64-unknown-linux-musl"
+
 nfpms:
   - builds:
       - "affine-build"
     vendor: dawnmagnet
     homepage: "https://github.com/DawnMagnet/affine-break.git"
     maintainer: "Dawn Magnet <axccjqh@qq.comm>"
-    description: "Disk Usage/Free Utility"
+    description: "Cipher/decrypt files with affine cipher"
     license: MIT
     formats:
       - apk
